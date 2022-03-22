@@ -58,7 +58,7 @@ describe("CarbonFootPrintYearTest", function () {
         await addShip.wait();
         expect(await carbonfootprint.getShipsCount()).to.equal(1);
 
-        const addFootPrintShip = await carbonfootprint.addFootPrintShip(907185, 1, 2022, "March", 22, 3);
+        const addFootPrintShip = await carbonfootprint.addFootPrintShip(907185, 1, 2022, 3, 22, 3);
         //wait until the transaction is mined
         await addFootPrintShip.wait();
         expect(await carbonfootprint.sfootPrintCount()).to.equal(1);
